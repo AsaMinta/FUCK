@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=14">
+</head>
+<body>
+    <video id="bg-video" class="hidden" loop muted playsinline>
+        <source src="BG.mp4" type="video/mp4">
+    </video>
+    <div class="overlay hidden"></div>
+
+    <!-- Layar Kunci -->
+    <div id="lock-screen">
+        <div class="lock-input-container">
+            <input type="password" id="password-input" placeholder="Masukkan Password...">
+            <br>
+            <button id="login-btn">Masuk</button>
+            <p id="error-msg" style="color: red; display: none;">Password Salah!</p>
+        </div>
+    </div>
+
+    <!-- Konten Utama -->
+    <div id="main-content" class="hidden">
+        <button id="lock-btn">Lock</button>
+        <a href="https://x.com/AnnieHatcy" target="_blank" class="x-link">
+            <svg viewBox="0 0 24 24" width="64" height="64" fill="white">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </a>
+        <div id="tokyo-clock" class="clock"></div>
+        <div id="nyc-clock" class="clock"></div>
+    </div>
+
+    <script src="script.js?v=14"></script>
+</body>
+</html>

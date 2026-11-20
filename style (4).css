@@ -1,0 +1,190 @@
+/* Mengatur agar layar penuh */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* Video Background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+/* Container Layar Kunci */
+#lock-screen {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.lock-input-container {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 90%;
+    max-width: 380px;
+}
+
+#password-input {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    background-color: rgba(26, 26, 26, 0.8);
+    color: #ffffff;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1rem;
+}
+
+#login-btn {
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Konten Utama */
+.hidden {
+    display: none !important;
+}
+
+#main-content {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#lock-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    background: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 5;
+}
+
+/* X Link */
+.x-link {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.x-link:hover {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    transform: scale(1.05);
+}
+
+.x-link svg {
+    transition: all 0.2s ease;
+}
+
+.x-link:hover svg {
+    /* Glitch effect simulasi */
+    filter: drop-shadow(2px -2px 0 rgba(255, 0, 0, 0.5)) drop-shadow(-2px 2px 0 rgba(0, 0, 255, 0.5));
+}
+
+/* NYC & Tokyo Clocks */
+.clock {
+    position: absolute;
+    bottom: 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 2px;
+}
+
+#tokyo-clock {
+    left: 20px;
+}
+
+#nyc-clock {
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    #bg-video {
+        object-fit: contain;
+        background-color: #000000;
+        object-position: center center;
+    }
+    
+    .lock-input-container {
+        width: 90%;
+    }
+
+    #password-input {
+        width: 220px;
+        max-width: 75vw;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    #login-btn {
+        padding: 7px 18px;
+        font-size: 12px;
+    }
+    
+    .x-link svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .clock {
+        font-size: 10px;
+        letter-spacing: 1px;
+        bottom: 16px;
+    }
+
+    #tokyo-clock {
+        left: 16px;
+    }
+
+    #nyc-clock {
+        right: 16px;
+    }
+}
+
